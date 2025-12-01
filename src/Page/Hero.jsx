@@ -23,7 +23,7 @@ function Hero() {
 
                     {/* Introduction Subtext */}
                     <p className="text-sm md:text-base lg:text-lg opacity-80 mb-6">
-                        <b>UI/UX Designer</b> dengan latar belakang Computer Science, berfokus pada pembuatan pengalaman digital yang jelas. Saya menggabungkan design thinking dan pengetahuan dasar frontend untuk menghasilkan antarmuka yang dapat berjalan dengan baik dalam produk nyata.
+                        <b>UI/UX Designer</b> UI/UX Designer dengan latar belakang Computer Science, berfokus pada pembuatan pengalaman digital yang jelas dan mudah dipahami pengguna. Saya menggabungkan design thinking dan pemahaman dasar front-end untuk menciptakan antarmuka yang tidak hanya menarik secara visual, tetapi juga efektif untuk digunakan dalam produk nyata. Saat ini, saya terbuka pada posisi UI/UX Design Intern untuk memperluas pengalaman dan berkontribusi pada solusi digital yang lebih baik.
                     </p>
 
                     {/* Introduction Github Button */}
