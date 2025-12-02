@@ -23,14 +23,23 @@ function Hero() {
 
                     {/* Introduction Subtext */}
                     <p className="text-sm md:text-base lg:text-lg opacity-80 mb-6">
-                        <b>UI/UX Designer</b> UI/UX Designer dengan latar belakang Computer Science, berfokus pada pembuatan pengalaman digital yang jelas dan mudah dipahami pengguna. Saya menggabungkan design thinking dan pemahaman dasar front-end untuk menciptakan antarmuka yang tidak hanya menarik secara visual, tetapi juga efektif untuk digunakan dalam produk nyata. Saat ini, saya terbuka pada posisi UI/UX Design Intern untuk memperluas pengalaman dan berkontribusi pada solusi digital yang lebih baik.
+                        Mahasiswa aktif Computer Science di Binus University dengan fokus di <b>UI/UX Design</b>. Terampil dalam riset pengguna, prototyping, desain UI, hierarki visual, dan alur pengguna. Memiliki kemampuan pemecahan masalah, kreativitas, berpikir kritis, dan komunikasi efektif. Terbuka untuk posisi UI/UX Design Intern untuk mengembangkan skill desain dan berkontribusi pada solusi digital.
+
                     </p>
 
-                    {/* Introduction Github Button */}
-                    <button onClick={GithubClicked} className="flex item-center mx-auto lg:mx-0 gap-2 bg-blue-700 px-5 py-2 rounded-lg font-medium text-sm text-white hover:bg-blue-800 transition-all">
-                        <Github size={18} />
-                        My Github
-                    </button>
+                    {/* Introduction Buttons */}
+                    <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+                        {/* Github Button */}
+                        <button onClick={GithubClicked} className="flex items-center gap-2 bg-blue-700 px-5 py-2 rounded-lg font-medium text-sm text-white hover:bg-blue-800 transition-all">
+                            <Github size={18} />
+                            My Github
+                        </button>
+
+                        {/* Resume Button */}
+                        <a href="https://drive.google.com/file/d/1_aOwnf0P2SBrLMKMW7ornpLY__El9QOJ/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-5 py-2 border-2 rounded-lg font-medium text-sm  hover:bg-gray-100 transition-all">
+                            My Resume
+                        </a>
+                    </div>
                 </section>
 
                 {/* Profile Picture */}
