@@ -35,7 +35,7 @@ function Hero() {
                         </button>
 
                         {/* Resume Button */}
-                        <a href="https://drive.google.com/file/d/1_aOwnf0P2SBrLMKMW7ornpLY__El9QOJ/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-5 py-2 border-2 rounded-lg font-medium text-sm  hover:bg-gray-100 transition-all">
+                        <a href="https://drive.google.com/drive/folders/1fl9_aCrAt1rwVJQy3Y-pFNHOHYThJrtC?usp=sharing" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-5 py-2 border-2 rounded-lg font-medium text-sm  hover:bg-gray-100 transition-all">
                             My Resume
                         </a>
                     </div>
