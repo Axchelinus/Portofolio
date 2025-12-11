@@ -9,9 +9,9 @@ function AboutMe() {
           <header className="text-xl font-semibold mb-4">Soft Skills</header>
           <ul className="list-disc list-inside space-y-2 text-gray-700 flex-1">
             <li>Creativity</li>
-            <li>Communication</li>
-            <li>Problem Solving</li>
             <li>Critical Thinking</li>
+            <li>Problem Solving</li>
+            <li>Communication</li>
           </ul>
         </section>
 
@@ -19,20 +19,20 @@ function AboutMe() {
         <section className="bg-white shadow-md rounded-xl p-6 text-center flex flex-col">
           <header className="text-xl font-semibold mb-4">Hard Skills</header>
           <ul className="list-disc list-inside space-y-2 text-gray-700 flex-1">
-            <li>UI/UX Designer Figma</li>
-            <li>Basic HTML, CSS and JavaScript</li>
-            <li>Basic React & Tailwind</li>
-            <li>Basic Machine Learning</li>
+            <li>UI/UX Design</li>
+            <li>HTML, CSS & JavaScript</li>
+            <li>React & Tailwind</li>
+            <li>Machine Learning</li>
           </ul>
         </section>
 
-        {/*  Card */}
+        {/*  Focus Expertise Card */}
         <section className="bg-white shadow-md rounded-xl p-6 text-center flex flex-col">
           <header className="text-xl font-semibold mb-4">Focus Expertise</header>
           <ul className="list-disc list-inside space-y-2 text-gray-700 flex-1">
             <li>User Research & Analysis</li>
-            <li>UI Design & Visual Hierarchy</li>
             <li>User Flow & Interaction Design</li>
+            <li>Front-End Development</li>
             <li>Documentation & Iteration</li>
           </ul>
         </section>

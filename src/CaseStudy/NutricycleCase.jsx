@@ -16,25 +16,25 @@ import FinalPembayaran from "../Nutricycle/finalDesign/pembayaran.jpg";
 // Nutricycle Case Study Project
 function NutricycleCase({
   // Case Study Value Type
-  title = "Nutricycle — Metode Scrum",
-  overview = "Pekerja, mahasiswa, dan keluarga sering kesulitan menjaga pola makan sehat karena keterbatasan waktu, sulitnya melacak nutrisi makanan pesan antar, biaya yang tinggi, serta minimnya pilihan katering sehat yang benar-benar terkurasi.",
+  title = "Nutricycle — Katering Sehat dengan Pelacakan Gizi",
+  overview = "Pekerja, mahasiswa, dan keluarga sering kesulitan menjaga pola makan sehat karena keterbatasan waktu dan biaya serta sulit melacak kandungan gizi. Nutricycle hadir sebagai platform katering sehat yang menyediakan paket makanan dengan informasi nutrisi yang jelas.",
 
   role = "UI Designer",
   tools = "Notion · Figma",
   status = "Completed",
 
-  firstProblemHeader = "Pola Makan Bermasalah : ",
-  firstProblem = "Pekerja, mahasiswa dan keluarga yang menghadapi beberapa masalah terkait pola makan sehat serta kesibukan yang membuat mereka tidak punya waktu untuk memasak makanan sehat.",
+  firstProblemHeader = "Pola Makan Tidak Teratur : ",
+  firstProblem = "Banyak mahasiswa dan pekerja tidak punya waktu memasak sehingga bergantung pada makanan pesan luar yang nutrisi-nya tidak terukur.",
 
-  secondProblemHeader = "Sulit Tracking Gizi : ",
-  secondProblem = "Makanan yang dipesan dari luar, sulit untuk dilacak kandungan nutrisinya dan menghambat keinginan untuk hidup sehat",
+  secondProblemHeader = "Tidak Ada Transparansi Gizi : ",
+  secondProblem = "Makanan yang dipesan dari luar, sulit untuk dilacak kandungan nutrisinya dan menghambat keinginan untuk hidup sehat.",
 
-  thirdProblemHeader = "Boros Biaya : ",
-  thirdProblem = "Memesan makanan setiap harinya bisa menjadi mahal dan menghasilkan tumpukan sampah kemasan sekali pakai yang tidak ramah lingkungan.",
+  thirdProblemHeader = "Biaya Makan Membengkak : ",
+  thirdProblem = "Membeli makanan setiap hari membuat pengeluaran tidak stabil dan kemasan sekali pakai menciptakan masalah lingkungan.",
 
-  firstGoal = "Goal 1 — Katalog Katering Sehat Terkurasi",
-  secondGoal = "Goal 2 — Pelacakan Nutrisi Otomatis",
-  thirdGoal = "Goal 3 — Budget Resep Masakan",
+  firstGoal = " — Menyediakan katalog katering sehat dengan paket yang telah dikurasi.",
+  secondGoal = " — Membuat sistem pelacakan nutrisi setiap kali user memesan paket.",
+  thirdGoal = " — Membantu user mengatur budget makan melalui visualisasi harga per paket.",
 
   Insight = "Proses riset dilakukan dengan melakukan wawancara terkait kendala yang dialami dan aplikasi Nutricycle sebagai penyelesaiannya. Scope awal atau sementara dari Nutricycle ini adalah mahasiswa Bina Nusantara. Selain melalui proses wawancara, kami menampilkan prototype dalam sebuah tenant yang telah disediakan dan user testing dilakukan dengan menjelaskan Nutricycle dan mengisi form.",
 
@@ -44,7 +44,7 @@ function NutricycleCase({
 
   implementationHandoff = "Saya ikut berperan dalam membuat desain UI/UX untuk bagian halaman utama, halaman keranjang dan halaman history belanja. Desain figma sudah lengkap secara fiturnya sesuai dengan perencanaan awal dan selesai tepat waktu sesuai sprint. Setelah menyelesaikan desain, saya menyerahkan desain sebagai potokan untuk rekan yang ditugaskan dalam implementasi front-end dan back-end.",
 
-  finalDesign = "Hasil desain final yang berbeda dengan desain figma dan implementasi dilakukan dengan vibe coding karena keterbatasan waktu dalam pembuatan aplikasinya untuk pameran tenant yang telah dijadwalkan.",
+  finalDesign = "Desain final menunjukkan perbedaan cukup banyak dari mockup Figma karena penyesuaian waktu implementasi. Namun, fungsionalitas utama tetap selaras dengan konsep awal.",
 
   resultLearning = "Project ini belum selesai karena hasil desain final yang masih berbeda dan perlu riset tambahan untuk menentukan nutrisi gizi pada sebuah makanan. Hasil dari riset pameran juga memberikan beberapa saran sebagai tambahan yang akan disusun terlebih dahulu kedepannya.",
 
@@ -52,7 +52,7 @@ function NutricycleCase({
 
   userTesting = "Kualitatif, fokus pada pemahaman user terhadap ide",
 
-  nextSteps = "Pengembangan Lanjutan"
+  nextSteps = "Pengembangan lanjutan berdasarkan hasil testing"
 }) {
   return (
     // Case Study Project Page
@@ -65,8 +65,8 @@ function NutricycleCase({
           <div className="grid lg:grid-cols-3 gap-8 items-center">
             <div className="lg:col-span-2">
               {/* Overview Header */}
-              <h1 className="text-3xl lg:text-4xl font-bold leading-tight">{title}</h1>
-              <p className="mt-4 text-gray-600">{overview}</p>
+              <h1 className="text-xl lg:text-2xl font-bold leading-tight">{title}</h1>
+              <p className="text-sm mt-4 text-gray-600">{overview}</p>
 
               {/* Overview Preparation */}
               <div className="mt-6 flex flex-wrap gap-4 items-center">
@@ -117,21 +117,24 @@ function NutricycleCase({
 
               {/* Subtext */}
               <ul className="list-disc list-inside text-gray-600 text-sm space-y-2">
-                <li>{firstGoal}</li>
-                <li>{secondGoal}</li>
-                <li>{thirdGoal}</li>
+                <li><b className="text-gray-800 font-semibold">Goal 1</b>{firstGoal}</li>
+                <li><b className="text-gray-800 font-semibold">Goal 2</b>{secondGoal}</li>
+                <li><b className="text-gray-800 font-semibold">Goal 3</b>{thirdGoal}</li>
               </ul>
             </div>
 
             {/* Role */}
-            <div className="mt-6 bg-white p-6 rounded-xl shadow-sm">
+            <div className="text-sm mt-6 bg-white p-6 rounded-xl shadow-sm">
               {/* Header */}
               <h3 className="text-lg font-semibold mb-3">My Role</h3>
 
               {/* Subtext */}
               {/* UI Designer Role */}
-              <h5><b className="text-gray-800 text-sm font-semibold">UI Designer</b></h5>
-              <p>Melakukan desain tampilan dan flow interaksi untuk halaman utama, memilih paket, halaman keranjang, halaman histori belanja dan halaman pembayaran.</p>
+              <h5><b className="text-gray-800 font-semibold">UI Designer</b></h5>
+              <ul className="list-disc list-inside text-gray-600 text-sm space-y-2">
+                <li>Mendesain halaman utama, katalog paket, detail paket, cart, history, dan pembayaran.</li>
+                <li>Membangun flow interaksi user dari pemilihan paket hingga checkout.</li>
+              </ul>
             </div>
           </aside>
 
@@ -151,7 +154,7 @@ function NutricycleCase({
                   <h4 className="font-semibold">Research & Insights</h4>
 
                   {/* Subtext 1 */}
-                  <p className="text-gray-600 mt-2">{Insight}</p>
+                  <p className="text-gray-600 mt-2 text-sm">{Insight}</p>
                 </div>
 
                 {/* Point 2 */}
@@ -160,7 +163,7 @@ function NutricycleCase({
                   <h4 className="font-semibold">User Flow & Wireframes</h4>
                   
                   {/* Subtext 2 */}
-                  <p className="text-gray-600 mt-2">{userFlow}</p>
+                  <p className="text-gray-600 mt-2 text-sm">{userFlow}</p>
                   
                   {/* Wireframe Screen Image */}
                   <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -177,7 +180,7 @@ function NutricycleCase({
                   <h4 className="font-semibold">Design Iteration</h4>
                   
                   {/* Subtext 3 */}
-                  <p className="text-gray-600 mt-2">{designIterartion}</p>
+                  <p className="text-gray-600 mt-2 text-sm">{designIterartion}</p>
                 </div>
 
                 {/* Point 4 */}
@@ -186,7 +189,7 @@ function NutricycleCase({
                   <h4 className="font-semibold">Implementation & Handoff</h4>
 
                   {/* Subtext 4 */}
-                  <p className="text-gray-600 mt-2">{implementationHandoff}</p>
+                  <p className="text-gray-600 mt-2 text-sm">{implementationHandoff}</p>
                 </div>
               </article>
             </div>
@@ -197,7 +200,7 @@ function NutricycleCase({
               <h2 className="text-2xl font-semibold mb-4">Final Design</h2>
 
               {/* Subtext */}
-              <p className="text-gray-600 mb-4">{finalDesign}</p>
+              <p className="text-gray-600 mb-4 text-sm">{finalDesign}</p>
 
               {/* Final Design Screen Image */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -214,26 +217,26 @@ function NutricycleCase({
               <h2 className="text-2xl font-semibold mb-4">Results & Learnings</h2>
 
               {/* Subtext */}
-              <p className="text-gray-600">{resultLearning}</p>
+              <p className="text-gray-600 text-sm">{resultLearning}</p>
 
               {/* Next Approach */}
               <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
                 {/* Metric */}
                 <div className="bg-gray-50 p-4 rounded-md text-center">
                   <p className="text-sm text-gray-500">Metric</p>
-                  <p className="text-lg font-semibold mt-2">{metric}</p>
+                  <p className="text-sm font-semibold mt-2">{metric}</p>
                 </div>
                 
                 {/* User Testing */}
                 <div className="bg-gray-50 p-4 rounded-md text-center">
                   <p className="text-sm text-gray-500">User Testing</p>
-                  <p className="text-lg font-semibold mt-2">{userTesting}</p>
+                  <p className="text-sm font-semibold mt-2">{userTesting}</p>
                 </div>
                 
                 {/* Next Steps */}
                 <div className="bg-gray-50 p-4 rounded-md text-center">
                   <p className="text-sm text-gray-500">Next Steps</p>
-                  <p className="text-lg font-semibold mt-2">{nextSteps}</p>
+                  <p className="text-sm font-semibold mt-2">{nextSteps}</p>
                 </div>
               </div>
             </div>

@@ -23,8 +23,7 @@ function Hero() {
 
                     {/* Introduction Subtext */}
                     <p className="text-sm md:text-base lg:text-lg opacity-80 mb-6">
-                        Mahasiswa aktif Computer Science di Binus University dengan fokus di <b>UI/UX Design</b>. Terampil dalam riset pengguna, prototyping, desain UI, hierarki visual, dan alur pengguna. Memiliki kemampuan pemecahan masalah, kreativitas, berpikir kritis, dan komunikasi efektif. Terbuka untuk posisi UI/UX Design Intern untuk mengembangkan skill desain dan berkontribusi pada solusi digital.
-
+                        Mahasiswa Computer Science dengan fokus pada UI/UX Design dan pengembangan aplikasi. Berpengalaman melalui proyek kampus dan proyek pribadi dalam desain UI, prototyping, dan pengembangan aplikasi.
                     </p>
 
                     {/* Introduction Buttons */}

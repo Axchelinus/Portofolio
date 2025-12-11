@@ -28,11 +28,11 @@ function Project() {
                         {/* STAR Project 1 Title */}
                         <section className="p-6">
                             {/* Header */}
-                            <h3 className="text-2xl font-semibold mb-2">ReBako Version 2 <span className="text-blue-600 font-medium text-base">(Solo Project)</span>
+                            <h3 className="text-2xl font-semibold mb-2">ReBako V2 <span className="text-blue-600 font-medium text-base">(Solo Project)</span>
                             </h3>
 
                             {/* Subtext */}
-                            <p className="text-gray-600 mb-4"> ReBako (Resep & Bahan Pokok), website yang berguna bagi masyarakat menengah ke bawah yang mengalami kesulitan dalam mengatur budget untuk membeli bahan pokok dan mencari resep masakan yang sesuai dengan budget yang tersedia, khusus masyarakat menengah yang setiap harinya pergi ke pasar tradisional.
+                            <p className="text-gray-600 mb-4">ReBako adalah platform yang membantu masyarakat dalam mengatur pengeluaran bahan pokok dan menemukan resep masakan yang sesuai dengan budget harian. Pada V2, saya melakukan pengembangan fitur inti seperti database harga pasar, perhitungan budget, dan rekomendasi resep berbasis anggaran untuk meningkatkan efisiensi belanja dan memasak.
                             </p>
 
                             {/* Link To Route */}
@@ -54,7 +54,7 @@ function Project() {
                             </h3>
 
                             {/* Subtext */}
-                            <p className="text-gray-600 mb-4">Penelitian deteksi komentar sarkasme kombinasi text dengan emoji menggunakan model deep learning indoBERTweet dan Bi-LSTM yang membahas kinerja kedua model dalam mendeteksi komentar sarkasme pada platform apliaksi TikTok.
+                            <p className="text-gray-600 mb-4">Penelitian deteksi komentar sarkasme berbasis kombinasi teks & emoji pada platform TikTok menggunakan model deep learning indoBERTweet dan Bi-LSTM yang membahas kinerja kedua model.
                             </p>
 
                             {/* Link To Route */}
@@ -79,7 +79,7 @@ function Project() {
                             </h4>
 
                             {/* Subtext */}
-                            <p className="text-gray-600 mb-3">Nutricycle, aplikasi catering yang dibangun bagi mahasiswa atau pekerja yang membutuhkan menu masakan yang sehat dan menawarkan fitur melacak gizi setiap kali memesan dari Nutricycle atau semuanya sudah diukur pada setiap paket yang tersedia.
+                            <p className="text-gray-600 mb-3">Nutricycle menjadi platform katering sehat yang membantu pekerja, mmahasiswa ataupun keluarga yang kesulitan dalam menjaga dan mengatur pola makan yang sehat.
                             </p>
 
                             {/* Link To Route */}
@@ -102,8 +102,7 @@ function Project() {
 
                             {/* Subtext */}
                             <p className="text-gray-600 mb-3">
-                                ReBako (Resep & Bahan Pokok), website yang berguna bagi masyarakat menengah ke bawah yang mengalami 
-                                kesulitan dalam mengatur budget untuk membeli bahan pokok dan mencari resep masakan yang sudah tersedia.
+                                ReBako adalah platform yang membantu masyarakat dalam mengatur pengeluaran bahan pokok dan menemukan resep masakan yang sesuai dengan budget harian.
                             </p>
 
                             {/* Link To Route */}

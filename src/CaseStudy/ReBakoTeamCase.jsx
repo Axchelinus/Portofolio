@@ -16,14 +16,14 @@ import FinalResep from "../Rebako-Tim/finalDesign/resep.png";
 // ReBako Team Case Study Project
 function ReBakoTeamCase({
   // Case Study Value Type
-  title = "ReBako Version 1 — Metode Scrum",
-  overview = "Masalah kenaikan bahan pokok, masyarakat khususnya menengah ke bawah yang kesulitan dalam mengatur budget dan sering bingung ingin menentukan masakan yang hemat dan tidak itu-itu saja terutama ketika harus menyesuaikan kebutuhan harian.",
+  title = "ReBako V1",
+  overview = "ReBako adalah platform yang membantu masyarakat dalam mengatur pengeluaran bahan pokok dan menemukan resep masakan yang sesuai dengan budget harian.",
 
   role = "Conceptual Designer · UI/UX Designer · Media Production Lead",
   tools = "Trello · Notion · Figma · Capcut",
   status = "Completed",
 
-  firstProblemHeader = "Kenaikan Harga : ",
+  firstProblemHeader = "Harga Bahan Fluktuatif : ",
   firstProblem = "Masyarakat menengah di perkotaan sering menghadapi kondisi di mana kenaikan harga bahan pokok lebih cepat daripada kenaikan pendapatan.",
 
   secondProblemHeader = "Kesulitan Mengatur Keuangan : ",
@@ -32,9 +32,9 @@ function ReBakoTeamCase({
   thirdProblemHeader = "Kebingungan Ketika Memasak : ",
   thirdProblem = "Masyarakat menengah mampu berbelanja, tetapi sering bingung menentukan masakan yang hemat dan tidak itu-itu saja, terutama ketika harus menyesuaikan kebutuhan harian.",
 
-  firstGoal = "Goal 1 — Database Harga Bahan",
-  secondGoal = "Goal 2 — Menghitung Pemakaian Budget",
-  thirdGoal = "Goal 3 — Budget Resep Masakan",
+  firstGoal = " — Menyediakan database harga bahan pokok untuk pengguna.",
+  secondGoal = " — Memberikan perhitungan budget untuk pengguna memilih bahan pokok.",
+  thirdGoal = " — Menyajikan resep yang berdasarkan harga total dari resep tersebut.",
 
   Insight = "Proses riset difokuskan pada pengumpulan informasi harga bahan pokok dari platform database pangan yang menyediakan API. Selain itu, melakukan riset pada website yummy sebagai referensi untuk membuat website ReBako ini. Scope dari ReBako ini masih belum begitu jelas.",
 
@@ -65,8 +65,8 @@ function ReBakoTeamCase({
           <div className="grid lg:grid-cols-3 gap-8 items-center">
             <div className="lg:col-span-2">
               {/* Overview Header */}
-              <h1 className="text-3xl lg:text-4xl font-bold leading-tight">{title}</h1>
-              <p className="mt-4 text-gray-600">{overview}</p>
+              <h1 className="text-xl lg:text-2xl font-bold leading-tight">{title}</h1>
+              <p className="text-sm mt-4 text-gray-600">{overview}</p>
 
               {/* Overview Preparation */}
               <div className="mt-6 flex flex-wrap gap-4 items-center">
@@ -117,9 +117,9 @@ function ReBakoTeamCase({
 
               {/* Subtext */}
               <ul className="list-disc list-inside text-gray-600 text-sm space-y-2">
-                <li>{firstGoal}</li>
-                <li>{secondGoal}</li>
-                <li>{thirdGoal}</li>
+                <li><b className="text-gray-800 font-semibold">Goal 1</b>{firstGoal}</li>
+                <li><b className="text-gray-800 font-semibold">Goal 2</b>{secondGoal}</li>
+                <li><b className="text-gray-800 font-semibold">Goal 3</b>{thirdGoal}</li>
               </ul>
             </div>
 
@@ -131,18 +131,18 @@ function ReBakoTeamCase({
               {/* Subtext */}
               <ul className="text-gray-600 text-sm list-disc list-inside space-y-2">
                 {/* Conceptual Designer Role */}
-                <h5><b className="text-gray-800 text-sm font-semibold">Conceptual Designer</b></h5>
+                <h5><b className="text-gray-800 font-semibold">Conceptual Designer</b></h5>
                 <li>Melakukan riset terkait masalah sekitar untuk menemukan ide penyelesaiannya.</li>
                 <li>Melakukan riset ide terkait fitur dan hubungannya dengan masalah.</li>
 
                 {/* UI/UX Designer Role */}
-                <h5><b className="text-gray-800 text-sm font-semibold">UI/UX Designer</b></h5>
+                <h5><b className="text-gray-800 font-semibold">UI/UX Designer</b></h5>
                 <li>Membuat flow sederhana sebagai wireframe untuk user ketika berinteraksi dengan fitur.</li>
                 <li>Membuat wireframe desain dalam bentuk website beserta prototypenya.</li>
 
                 {/* Media Production Lead Role */}
-                <h5><b className="text-gray-800 text-sm font-semibold">Media Production Lead</b></h5>
-                <p>Membuat video trailer editing bagian latar masalah dan penutup video.</p>
+                <h5><b className="text-gray-800 font-semibold">Media Production Lead</b></h5>
+                <li>Membuat video trailer editing bagian latar masalah dan penutup video.</li>
               </ul>
             </div>
           </aside>
@@ -163,7 +163,7 @@ function ReBakoTeamCase({
                   <h4 className="font-semibold">Research & Insights</h4>
 
                   {/* Subtext 1 */}
-                  <p className="text-gray-600 mt-2">{Insight}</p>
+                  <p className="text-gray-600 mt-2 text-sm">{Insight}</p>
                 </div>
 
                 {/* Point 2 */}
@@ -172,7 +172,7 @@ function ReBakoTeamCase({
                   <h4 className="font-semibold">User Flow & Wireframes</h4>
                   
                   {/* Subtext 2 */}
-                  <p className="text-gray-600 mt-2">{userFlow}</p>
+                  <p className="text-gray-600 mt-2 text-sm">{userFlow}</p>
                   
                   {/* Wireframe Screen Image */}
                   <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -189,7 +189,7 @@ function ReBakoTeamCase({
                   <h4 className="font-semibold">Design Iteration</h4>
                   
                   {/* Subtext 3 */}
-                  <p className="text-gray-600 mt-2">{designIterartion}</p>
+                  <p className="text-gray-600 mt-2 text-sm">{designIterartion}</p>
                 </div>
 
                 {/* Point 4 */}
@@ -198,7 +198,7 @@ function ReBakoTeamCase({
                   <h4 className="font-semibold">Implementation & Handoff</h4>
 
                   {/* Subtext 4 */}
-                  <p className="text-gray-600 mt-2">{implementationHandoff}</p>
+                  <p className="text-gray-600 mt-2 text-sm">{implementationHandoff}</p>
                 </div>
               </article>
             </div>
@@ -209,7 +209,7 @@ function ReBakoTeamCase({
               <h2 className="text-2xl font-semibold mb-4">Final Design</h2>
 
               {/* Subtext */}
-              <p className="text-gray-600 mb-4">{finalDesign}</p>
+              <p className="text-gray-600 mb-4 text-sm">{finalDesign}</p>
 
               {/* Final Design Screen Image */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -226,26 +226,26 @@ function ReBakoTeamCase({
               <h2 className="text-2xl font-semibold mb-4">Results & Learnings</h2>
 
               {/* Subtext */}
-              <p className="text-gray-600">{resultLearning}</p>
+              <p className="text-gray-600 text-sm">{resultLearning}</p>
 
               {/* Next Approach */}
               <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
                 {/* Metric */}
                 <div className="bg-gray-50 p-4 rounded-md text-center">
                   <p className="text-sm text-gray-500">Metric</p>
-                  <p className="text-lg font-semibold mt-2">{metric}</p>
+                  <p className="text-sm font-semibold mt-2">{metric}</p>
                 </div>
                 
                 {/* User Testing */}
                 <div className="bg-gray-50 p-4 rounded-md text-center">
                   <p className="text-sm text-gray-500">User Testing</p>
-                  <p className="text-lg font-semibold mt-2">{userTesting}</p>
+                  <p className="text-sm font-semibold mt-2">{userTesting}</p>
                 </div>
                 
                 {/* Next Steps */}
                 <div className="bg-gray-50 p-4 rounded-md text-center">
                   <p className="text-sm text-gray-500">Next Steps</p>
-                  <p className="text-lg font-semibold mt-2">{nextSteps}</p>
+                  <p className="text-sm font-semibold mt-2">{nextSteps}</p>
                 </div>
               </div>
             </div>

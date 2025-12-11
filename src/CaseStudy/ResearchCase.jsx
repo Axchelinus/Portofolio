@@ -17,35 +17,33 @@ import TestBertweetMetric from "../Research/tester/indoBERTweet-Metric.png";
 function ResearchCase({
   // Case Study Value Type
   title = "Deteksi Komentar Sarkasme Teks & Emoji dengan indoBERTweet & Bi-LSTM",
-  overview = "Pendekatan model deep learning yaitu indoBERTweet & Bi-LSTM untuk mendeteksi komentar sarkasme berbasis kombinasi teks dan emoji pada platform aplikasi TikTok.",
+  overview = "Penelitian deteksi komentar sarkasme berbasis kombinasi teks & emoji pada platform TikTok menggunakan model deep learning indoBERTweet dan Bi-LSTM yang membahas kinerja kedua model.",
 
   role = "Research Lead · Data Engineer · Deep Learning Engineer · Media Production Lead",
   tools = "Microsoft Word · Microsoft Excel · Canva · Capcut · Python",
   status = "Completed",
 
-  problem = "Sarkasme adalah bentuk komunikasi yang sering digunakan dalam interaksi dimedia sosial. Sarkasme memiliki makna yang bertolak belakang dengan kalimat yang disampaikan, sehingga sampai sekarang masih sulit untuk dipahami dengan akurat oleh model kecerdasan buatan.",
+  problem = "Sarkasme merupakan bentuk komunikasi yang sering muncul di media sosial dan memiliki makna berlawanan dengan teks yang disampaikan. Hal ini membuat sarkasme sulit dipahami oleh model kecerdasan buatan, terlebih jika komentar mengandung kombinasi teks dan emoji yang dapat memunculkan makna ambigu.",
 
-  firstGoal = "Goal 1 — Model indoBERTweet",
-  secondGoal = "Goal 2 — Model Bi-LSTM",
-  thirdGoal = "Goal 3 — Perbandingan model",
+  firstGoal = " — Membangun model indoBERTweet",
+  secondGoal = " — Membangun model Bi-LSTM berbasis FastText",
+  thirdGoal = " — Membandingkan performa kedua model",
 
-  firstInsight = "Metodologi penelitian ini adalah kualitatif dengan cara scrapping data menggunakan apify.com dengan mengambil komentar dari beberapa video yang telah dipilih dan memiliki komentar sarkasme berbasis kombinasi teks dan emoji. Dataset dikumpulkan dengan satu video akan menjadi satu file excel yang berisi hasil scrapping komentar tersebut. Tahap selanjutnya melakukan gathering data dengan menggabungkan semua file excel yang terkumpul menjadi satu file excel terpusat supaya dapat melalui proses data cleaning dengan mudah.",
+  research = "Metode penelitian dilakukan secara kualitatif dari platform TikTok yang menjadi dataset untuk penelitian ini, berikut alur pengerjaannya :",
 
-  secondInsight = "Proses data cleaning dilakukan dengan menghilangkan spasi berlebihan dan simbol-simbol yang tidak di-inginkan. Data yang sudah bersih akan melalui proses data shuffled dengan tujuan supaya file excel terpusat yang memiliki komentar berurutan sesuai video menjadi acak sehingga model dapat terlatih dengan baik. Data yang belum diacak, kemungkinan besar model akan menghafal saja tanpa mengerti makna dari komentar tersebut. Setelah dataset sudah diacak, proses dilanjutkan ke labeling yang dilakukan secara manual. Dataset akan dipisah menjadi dataset khusus training dan dataset khusus testing.",
+  preprocessTraining = "Preprocessing dilakukan sebelum memasuki proses training & validation dan testing, ini dilakukan supaya dataset dapat diproses oleh model yang sudah dikembangkan.",
 
-  datasetTraining = "Model indoBERTweet merupakan model fine-tuned atau telah mengerti komentar berbentuk teks dan dapat mengubahnya menjadi bentuk vektor. Model Bi-LSTM akan menggunakan Fast-Text untuk membantu meningkatkan kinerja model dalam membaca sekaligus mengubah komentar berbentuk teks menjadi vektor. Kedua model tidak secara langsung mengenali emoji dan tidak dapat melakukan konversi ke dalam bentuk vektor. Mengkonversikan emoji ke dalam bentuk teks dengan menggunakan libary bawaan python yaitu emoji lalu melakukan cleaning dari hasil konversi emojinya dalam bentuk teks dan akan dimasukkan ke dalam kamus emoji yang telah dibuat fungsinya untuk dikonversi lagi teks yang awalnya bahasa inggris menjadi bahasa indonesia. Emoji yang masuk ke dalam kamus emoji adalah emoji yang muncul dalam dataset. Training pada indoBERTweet dan Bi-LSTM dilakukan dalam 5 epoch dengan bantuan optimizer untuk mengurangi kemungkinan terjadinya loss berlebihan.",
+  model = "Kedua model menunjukkan performa training & validation yang stabil, serta mampu memprediksi sarkasme dengan baik tanpa menghafal pola.",
 
-  model = "Hasil training kedua model menunjukkan bahwa kedua model benar-benar dapat memprediksi dengan performa yang bagus. Selanjutnya, model akan langsung melalui proses testing dengan menggunakan dataset yang berbeda dari dataset khusus training dan validation",
-
-  finalResult = "Hasil dari kedua model setelah melalui proses testing menunjukkan bahwa kedua model dapat mendeteksi komentar sarkasme berbasis kombinasi teks dan emoji dengan output prediksi benar yang lebih tinggi dibanding output prediksi salah. Model indoBERTweet menjadi model yang lebih tinggi dan akurat dibanding model Bi-LSTM karena model indoBERTweet telah dilatih sebelumnya dengan dataset bahasa indonesia gaul pada platform Twitter sehingga ketika dilatih dan melalui test, model indoBERTweet mempunyai performa yang lebih akurat dibanding model Bi-LSTM yang dilatih langsung pada dataset baru dengan bantuan Fast-Text yang sudah dilatih sebelumnya tetapi pada bahasa indonesia yang tidak menggunakan singkatan.",
+  finalResult = "Kedua model berhasil mendeteksi sarkasme berbasis teks dan emoji dengan output prediksi benar yang lebih tinggi dibanding prediksi salah. Model indoBERTweet menjadi model yang lebih akurat dan Bi-LSTM tetap berfungsi baik, tetapi tidak seakurat indoBERTweet yang sudah melalui proses fine-tuning. Berikut alasan model indoBERTweet menjadi model yang lebih akurat :",
 
   resultLearning = "Riset untuk metric akan diambil dari respon positif dan negatif sesuai jawaban responden, serta user testing akan dilakukan dengan interview dan next step adalah implementasi yang masih dalam perencanaan.",
 
-  metric = "Accuracy, Precision, Recall, F1, Specificity, ROC-AUC",
+  metric = "Accuracy, Precision, Recall, F1-Score, Specificity, ROC-AUC",
 
   userTesting = "—",
 
-  nextSteps = "Menambah dataset dan menguji model dengan dataset terpisah teks dan emoji"
+  nextSteps = "Menambah dataset menjadi lebih besar dan menguji model dengan dataset terpisah teks & emoji"
 }) {
   return (
     // Case Study Project Page
@@ -58,8 +56,8 @@ function ResearchCase({
           <div className="grid lg:grid-cols-3 gap-8 items-center">
             <div className="lg:col-span-2">
               {/* Overview Header */}
-              <h1 className="text-3xl lg:text-4xl font-bold leading-tight">{title}</h1>
-              <p className="mt-4 text-gray-600">{overview}</p>
+              <h1 className="text-xl lg:text-2xl font-bold leading-tight">{title}</h1>
+              <p className="text-sm mt-4 text-gray-600">{overview}</p>
 
               {/* Overview Preparation */}
               <div className="mt-6 flex flex-wrap gap-4 items-center">
@@ -108,9 +106,9 @@ function ResearchCase({
 
               {/* Subtext */}
               <ul className="list-disc list-inside text-gray-600 text-sm space-y-2">
-                <li>{firstGoal}</li>
-                <li>{secondGoal}</li>
-                <li>{thirdGoal}</li>
+                <li><b className="text-gray-800 font-semibold">Goal 1</b>{firstGoal}</li>
+                <li><b className="text-gray-800 font-semibold">Goal 2</b>{secondGoal}</li>
+                <li><b className="text-gray-800 font-semibold">Goal 3</b>{thirdGoal}</li>
               </ul>
             </div>
 
@@ -123,31 +121,32 @@ function ResearchCase({
               <ul className="text-gray-600 text-sm list-disc list-inside space-y-2">
                 {/* Research Lead */}
                 <h5><b className="text-gray-800 text-sm font-semibold">Research Lead</b></h5>
-                <li>Melakukan riset dari paper research lain terkait model deep learning sebagai paper kunci.</li>
-                <li>Melakukan riset untuk alur pengerjaan paper bagian metodologi penelitian.</li>
-                <li>Membuat laporan penelitian bagian literature review, metodologi penelitian, hasil penelitian dan kesimpulan.</li>
-                <li>Membuat paper penelitian bagian abstrak, metodologi penelitian, hasil penelitian dan kesimpulan.</li>
+                <li>Melakukan riset studi dari berbagai penelitian terkait model deep learning.</li>
+                <li>Merancang alur metodologi penelitian.</li>
+                <li>Menulis laporan penelitian literature review, metodologi, hasil, dan kesimpulan.</li>
+                <li>Menyusun abstrak dan menyempurnakan bagian metodologi, hasil, dan kesimpulan.</li>
 
                 {/* Data Engineer */}
                 <h5><b className="text-gray-800 text-sm font-semibold">Data Engineer</b></h5>
-                <li>Melakukan scrapping data dari platform aplikasi TikTok menggunakan apify.com.</li>
-                <li>Mengumpulkan dataset yang terpisah menjadi satu file terpusat.</li>
-                <li>Melakukan data cleaning pada dataset.</li>
-                <li>Melakukan data shuffled untuk mencegah model tidak memahami sarkasme.</li>
-                <li>Melakukan labeling manual pada dataset pada sebagian besar dataset dengan total 4.363 data komentar.</li>
+                <li>Scrapping data komentar TikTok menggunakan apify.com.</li>
+                <li>Menggabungkan seluruh file dataset menjadi satu dataset terpusat.</li>
+                <li>Melakukan data cleaning yaitu menghapus simbol, noise, dan spasi berlebih.</li>
+                <li>Melakukan data shuffling untuk mencegah model sekadar menghafal pola komentar.</li>
+                <li>Melakukan manual labeling untuk total 4.363 komentar.</li>
 
                 {/* Deep Learning Engineer */}
                 <h5><b className="text-gray-800 text-sm font-semibold">Deep Learning Engineer</b></h5>
-                <li>Membuat model indoBERTweet untuk training & validation dan testing.</li>
-                <li>Membuat model Fast-Text untuk training & validation dan testing.</li>
+                <li>Mengembangkan dan melatih model indoBERTweet.</li>
+                <li>Mengembangkan model Bi-LSTM dengan FastText embedding.</li>
+                <li>Mengatur pipeline training, validation, testing dan preprocessing emoji.</li>
+                <li>Membuat kamus konversi emoji menjadi teks Bahasa Indonesia.</li>
 
                 {/* Media Production Lead Role */}
                 <h5><b className="text-gray-800 text-sm font-semibold">Media Production Lead</b></h5>
-                <li>Membuat poster penelitian dari paper penelitian.</li>
-                <li>Membuat video presentasi poster penelitian bagian metodologi penelitian.</li>
-                <li>Membuat video presentasi PPT dari paper penelitian bagian metodologi penelitian.</li>
-                <li>Membuat video trailer edit dari paper penelitian.</li>
-                <li>Membuat video presentasi program dari model Bi-LSTM</li>
+                <li>Membuat poster penelitian.</li>
+                <li>Membuat video presentasi metodologi untuk poster dan PPT.</li>
+                <li>Membuat trailer penelitian.</li>
+                <li>Membuat video demonstrasi model Bi-LSTM.</li>
               </ul>
             </div>
           </aside>
@@ -165,23 +164,43 @@ function ResearchCase({
                 {/* Point 1 */}
                 <div>
                   {/* Header 1 */}
-                  <h4 className="font-semibold">Research & Insights</h4>
+                  <h4 className="font-semibold">Research Method</h4>
 
                   {/* Subtext 1 */}
-                  <p className="text-gray-600 mt-2">
-                    {firstInsight}
+                  <p className="text-gray-600 mt-2 text-sm">
+                    {research}
                     <br></br><br></br>
-                    {secondInsight}
+                    <ul className="list-disc list-inside text-gray-600 text-sm space-y-2">
+                      <li>Scrapping data dilakukan menggunakan apify.com dari beberapa video TikTok yang memiliki interaksi sarkasme berbasis teks & emoji.</li>
+                      <li>Setiap video menghasilkan satu file dataset, kemudian seluruh file digabung menjadi satu dataset terpusat agar proses cleaning lebih efektif.</li>
+                      <li>Data cleaning mencakup penghapusan spasi berlebihan, karakter tidak penting, dan simbol.</li>
+                      <li>Dataset kemudian di-shuffle agar urutan komentar dari setiap video tidak membuat model menghafal pola ketika melalui proses training & validation.</li>
+                      <li>Labeling dilakukan secara manual untuk menjaga kualitas data.</li>
+                      <li>Dataset dipisahkan menjadi training & validation dan testing.</li>
+                      <li>Mengembangkan kedua model melalui training & validation dan testing</li>
+                      <li>Membandingkan kedua model dengan proses loss, metrik, dan confusion matrix</li>
+                    </ul>
                   </p>
                 </div>
 
                 {/* Point 2 */}
                 <div>
                   {/* Header 2 */}
-                  <h4 className="font-semibold">Dataset & Training</h4>
+                  <h4 className="font-semibold">Preprocessing & Training</h4>
                   
                   {/* Subtext 2 */}
-                  <p className="text-gray-600 mt-2">{datasetTraining}</p>
+                  <p className="text-gray-600 mt-2 text-sm">
+                    {preprocessTraining}
+                  </p>
+                  <br></br>
+                  <ul className="list-disc list-inside text-gray-600 text-sm space-y-2">
+                      <li>indoBERTweet digunakan sebagai model berbasis transformer yang telah dilatih pada bahasa Indonesia gaul di Twitter.</li>
+                      <li>Bi-LSTM + FastText digunakan sebagai pendekatan baseline yang tetap mampu mengenali konteks.</li>
+                      <li>Library emoji digunakan untuk mengubah emoji menjadi teks.</li>
+                      <li>Hasil konversi emoji dibersihkan ulang dan disesuaikan dengan kamus buatan sendiri agar maknanya relevan dengan bahasa Indonesia.</li>
+                      <li>Training & validation berlangsung selama 5 epoch pada masing-masing model dengan optimizer untuk mengurangi loss.</li>
+                      <li>Testing berlangsung selama 5 epoch sama seperti proses training & validation.</li>
+                    </ul>
                   
                   {/* Wireframe Screen Image */}
                   <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -198,7 +217,7 @@ function ResearchCase({
                   <h4 className="font-semibold">Models Training & Validation Result</h4>
                   
                   {/* Subtext 3 */}
-                  <p className="text-gray-600 mt-2">{model}</p>
+                  <p className="text-gray-600 mt-2 text-sm">{model}</p>
                 </div>
               </article>
             </div>
@@ -209,7 +228,14 @@ function ResearchCase({
               <h2 className="text-2xl font-semibold mb-4">Final Result</h2>
 
               {/* Subtext */}
-              <p className="text-gray-600 mb-4">{finalResult}</p>
+              <p className="text-gray-600 mb-4 text-sm">
+                {finalResult}
+              </p>
+              <ul className="list-disc list-inside text-gray-600 text-sm space-y-2">
+                <li>Telah di-pretrained pada dataset bahasa Indonesia gaul di Twitter.</li>
+                <li>Mampu memahami konteks singkatan dan bahasa informal.</li>
+                <li>memiliki representasi teks yang lebih mendalam dibanding embedding FastText.</li>
+              </ul>
 
               {/* Final Design Screen Image */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -226,26 +252,26 @@ function ResearchCase({
               <h2 className="text-2xl font-semibold mb-4">Results & Learnings</h2>
 
               {/* Subtext */}
-              <p className="text-gray-600">{resultLearning}</p>
+              <p className="text-gray-600 text-sm">{resultLearning}</p>
 
               {/* Next Approach */}
               <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
                 {/* Metric */}
                 <div className="bg-gray-50 p-4 rounded-md text-center">
                   <p className="text-sm text-gray-500">Metric</p>
-                  <p className="text-lg font-semibold mt-2">{metric}</p>
+                  <p className="text-sm font-semibold mt-2">{metric}</p>
                 </div>
                 
                 {/* User Testing */}
                 <div className="bg-gray-50 p-4 rounded-md text-center">
                   <p className="text-sm text-gray-500">User Testing</p>
-                  <p className="text-lg font-semibold mt-2">{userTesting}</p>
+                  <p className="text-sm font-semibold mt-2">{userTesting}</p>
                 </div>
                 
                 {/* Next Steps */}
                 <div className="bg-gray-50 p-4 rounded-md text-center">
                   <p className="text-sm text-gray-500">Next Steps</p>
-                  <p className="text-lg font-semibold mt-2">{nextSteps}</p>
+                  <p className="text-sm font-semibold mt-2">{nextSteps}</p>
                 </div>
               </div>
             </div>

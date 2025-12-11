@@ -16,45 +16,55 @@ import FinalRecipe from "../Rebako-Personal/finalDesign/Page Menu Recipe.png";
 // ReBako Personal Case Study Project
 function ReBakoPersonalCase({
   // Case Study Value Type
-  title = "ReBako Version 2 — Pengembangan Versi Sebelumnya — Metode Kanban",
-  overview = "Masalah kenaikan bahan pokok, masyarakat khususnya menengah ke bawah yang kesulitan dalam mengatur budget dan sering bingung ingin menentukan masakan yang hemat dan tidak itu-itu saja terutama ketika harus menyesuaikan kebutuhan harian.",
+  title = "ReBako V2 — Platform Database Harga & Solusi Belanja Harian",
+  overview = "ReBako adalah platform yang membantu masyarakat dalam mengatur pengeluaran bahan pokok dan menemukan resep masakan yang sesuai dengan budget harian. Pada V2, saya melakukan pengembangan fitur inti seperti database harga pasar, perhitungan budget, dan rekomendasi resep berbasis anggaran untuk meningkatkan efisiensi belanja dan memasak.",
 
   role = "Product Designer · Full Stack Web Developer",
   tools = "Trello · Figma · React · Tailwind · ExpressJs · MySQL",
   status = "On Progress",
 
-  firstProblemHeader = "Kenaikan Harga : ",
-  firstProblem = "Masyarakat menengah di perkotaan sering menghadapi kondisi di mana kenaikan harga bahan pokok lebih cepat daripada kenaikan pendapatan.",
+  firstProblemHeader = "Harga Bahan Fluktuatif : ",
+  firstProblem = "Kenaikan harga sering tidak sejalan dengan pendapatan, membuat pengeluaran rumah tangga sulit diprediksi.",
 
   secondProblemHeader = "Kesulitan Mengatur Keuangan : ",
-  secondProblem = "Walaupun pendapatan cukup, perencanaan belanja sering tidak terarah, terutama saat harga pangan fluktuatif. Akibatnya, pengeluaran tidak stabil dan biaya masak sulit dikendalikan.",
+  secondProblem = "Banyak pengguna dapat berbelanja, tetapi tidak memiliki panduan sederhana untuk menghitung kebutuhan masak berdasarkan budget harian.",
 
   thirdProblemHeader = "Kebingungan Ketika Memasak : ",
-  thirdProblem = "Masyarakat menengah mampu berbelanja, tetapi sering bingung menentukan masakan yang hemat dan tidak itu-itu saja, terutama ketika harus menyesuaikan kebutuhan harian.",
+  thirdProblem = "Pengguna sering bingung memilih masakan yang tidak repetitif namun tetap sesuai budget, terutama saat harus berbelanja di pasar tradisional.",
 
-  firstGoal = "Goal 1 — Database Harga Bahan",
-  secondGoal = "Goal 2 — Menghitung Pemakaian Budget",
-  thirdGoal = "Goal 3 — Budget Resep Masakan",
+  firstGoal = " — Menyediakan database harga bahan pokok dari pasar tradisional agar pengguna memiliki referensi estimasi harga yang ter-update.",
+  secondGoal = " — Memberikan perhitungan kebutuhan bahan sesuai budget agar pengguna dapat mengontrol pengeluaran harian dan bulanan.",
+  thirdGoal = " — Menyajikan rekomendasi resep berdasarkan anggaran agar pengguna dapat memasak variasi menu tanpa melewati batas budget.",
 
-  firstInsight = "Riset dilakukan pada database harga bahan dan resep masakan. Setiap harga bahan yang ada dalam database merupakan harga tengah dari range harga yang ditemukan dari berbagai pasar tradisional di wilayah Jakarta. Resep masakan membutuhkan riset untuk mengisi detail dari sebuah resep masakan yang diambil dari platform Youtube sebagai referensi, serta perhitungan budget untuk resep akan mengikuti harga tengah dari database dan sesuai dengan jumlah yang dipakai. Riset juga dilakukan pada kompetitor yaitu website yummy, cookpad, dan dapurbunda dengan mencari celah yang unik untuk ReBako ini, serta sebagai referensi desain juga.",
+  hargaBahanPokok = "Saya mengumpulkan data harga dari berbagai pasar tradisional di wilayah Jakarta karena setiap pasar memiliki variasi harga sendiri. Pengumpulan data harga akan dilakukan dengan menggunakan data resmi dari pemerintah dan melalui berita untuk menciptakan suatu range atau estimasi harga secara keseluruhan wilayah Jakarta. Harga tengah atau median akan dibutuhkan sebagai tampilan harga dalam database dan dihitung berdasarkan estimasi harga yang telah terbentuk pada setiap bahan pokok.",
 
-  secondInsight = "Kenapa scope-nya luas? Karena berpatokan pada 1 wilayah yang spesifik dapat menghasilkan data range harga tiap bahan yang hanya mencakup wilayah itu saja sehingga ketika 1 wilayah spesifik lainnya bisa berbeda range harganya. Oleh karena itu, range harga ditetapkan pada wilayah Jakarta daripada wilayah Jakarta yang spesifik supaya dapat menghasilkan range harga yang stabil untuk tiap wilayah yang termasuk dalam wilaya Jakarta. ReBako terbentuk dengan tujuan supaya user dapat memperkirakan dan menyisihkan sebagian penghasilan mereka untuk belanja di pasar tradisional.",
+  risetResepMasakan = "Saya menganalisis resep masakan dari beberapa sumber baik Youtube ataupun sumber lain untuk memastikan setiap resep memiliki langkah yang jelas, daftar bahan yang standar, dan estimasi harga yang dapat dihitung otomatis berdasarkan database ReBako",
 
-  userFlow = "Flow utama dalam website ini adalah user akan berada pada menu home dan dapat membaca latar belakang dan fitur penyelesaian dari ReBako serta melihat posisi lokasi user yang secara otomotis memberikan alamat pasar tradisional terdekat dari lokasi user. Setelah itu, terdapat 3 menu utama yaitu Pricelist, Budget dan Recipe. Menu Pricelist akan menampilkan database harga untuk user, menu Budget akan menampilkan perhitungan pengeluaran sesuai keinginan user serta rekomendasi resep dari total belanja diutamakan dari yang termurah sesuai dengan bahan yang dipilih dan menu Recipe akan menampilkan resep masakan yang tersedia dengan adanya perkiraan harga yang dihitung dari bahan yang dipakai untuk mengikuti resep itu.",
+  analisisKompetitor = "Saya membandingkan tiga kompetitor utama yaitu Yummy, Cookpad, dan DapurBunda. Fokus riset ini adalah untuk menemukan gap yang tidak mereka sediakan, yaitu fitur budgeting berdasarkan harga pasar tradisional dan fitur resep masakan yang dihitung total pengeluarannya berdasarkan bahan yang terintegrasi langsung oleh database harga bahan.",
 
-  designIterartion = "Ide ini adalah pengembangan dari ReBako versi sebelumnya yang masih kurang valueable dalam menangani masalah yang merupakan dasar dari ide ini. Pengembangan dilakukan dengan meneliti kembali kekurangan dari fitur yang telah di-implementasikan pada ReBako versi sebelumnya. Kini, setiap fitur telah valueable sesuai dengan konteks masalah ReBako ini. Selain itu, desain sebelumnya telah diperbaiki menjadi desain yang lebih jelas dan profesional.",
+  insight = "Pengguna kemungkinan membutuhkan platform yang menyatukan estimasi harga bahan, perhitungan budget, dan resep hemat dalam satu tempat.",
 
-  implementationHandoff = "Project ini masih dalam progress dan sekarang sudah menyelesaikan desain figma, karena ini solo project maka handoff dilakukan sendiri untuk implementasikan sesuai dengan desain figma yang sudah dibuat.",
+  userFlow = "Alur utama ReBako dimulai saat pengguna berada pada landing page atau menu Home. Pada halaman ini, pengguna dapat mengetahui konteks masalah yang ingin diselesaikan oleh platform ReBako beserta fitur penyelesaiannya dan mengetahui pasar terdekat dari posisi pengguna.",
 
-  finalDesign = "Hasil desain final dari wireframe ReBako dan referensi website kompetitor.",
+  pricelist = "Pengguna dapat melihat database harga bahan pokok dari pasar tradisional wilayah Jakarta serta estimasi biaya setiap dan keseluruhan wilayah Jakarta pada masing-masing bahan yang tersedia dalam database.",
 
-  resultLearning = "Riset untuk metric akan diambil dari respon positif dan negatif sesuai jawaban responden, serta user testing akan dilakukan dengan interview dan next step adalah implementasi yang masih dalam perencanaan.",
+  budget = "Pengguna dapat menambahkan bahan yang dapat di-inginkan dan melihat estimasi biaya yang dikeluarkan sesuai dari total keseluruhan bahan yang dipilih serta akan mendapatkan rekomendasi resep mulai dari yang hemat sesuai dengan bahan yang dipilih pengguna.",
 
-  metric = "Planned",
+  recipe = "Pengguna dapat melihat resep yang dapat di-ikuti serta estimasi biaya yang diperlukan yang dihitung berdasarkan bahan yang digunakan dalam resep tersebut.",
 
-  userTesting = "5 User Interview",
+  designIterartion = "ReBako V2 merupakan pengembangan dari versi sebelumnya yang belum menyelesaikan masalah pengguna secara efektif. Pada iterasi ini, saya melakukan :",
 
-  nextSteps = "Planned"
+  implementationHandoff = "Saat ini, project berada ditahapan melakukan riset harga untuk database dan karena ini solo project maka handoff dilakukan sendiri untuk tahap implementasi sesuai dengan desain figma yang sudah dibuat sesuai dengan tools yang digunakan.",
+
+  finalDesign = "Desain final untuk tampilan awal setiap menu terdiri dari empat halaman utama yaitu Home, Pricelist, Budget, dan Recipe dengan fokus pada keterbacaan, kesederhanaan visual, dan alur penggunaan yang mudah. Setiap komponen UI dirancang untuk memudahkan pengguna memahami harga bahan, menghitung kebutuhan belanja, dan menemukan resep sesuai budget.",
+
+  resultLearning = "Karena project masih dalam tahap riset data dan desain, evaluasi belum dapat dilakukan. Rencana pengujian sudah disusun dan melalui proses ini, saya mempelajari pentingnya komunikasi antar-fitur, penyesuaian alur berdasarkan konteks pasar tradisional, serta menyusun solusi yang benar-benar relevan dan berguna.",
+
+  metric = "Task completion rate, clarity score & perceived usefulness",
+
+  userTesting = "5 sesi interview",
+
+  nextSteps = "Iterasi berdasarkan hasil testing dan implementasi fitur"
 }) {
   return (
     // Case Study Project Page
@@ -67,8 +77,8 @@ function ReBakoPersonalCase({
           <div className="grid lg:grid-cols-3 gap-8 items-center">
             <div className="lg:col-span-2">
               {/* Overview Header */}
-              <h1 className="text-3xl lg:text-4xl font-bold leading-tight">{title}</h1>
-              <p className="mt-4 text-gray-600">{overview}</p>
+              <h1 className="text-xl lg:text-2xl font-bold leading-tight">{title}</h1>
+              <p className="mt-4 text-gray-600 text-sm">{overview}</p>
 
               {/* Overview Preparation */}
               <div className="mt-6 flex flex-wrap gap-4 items-center">
@@ -119,9 +129,9 @@ function ReBakoPersonalCase({
 
               {/* Subtext */}
               <ul className="list-disc list-inside text-gray-600 text-sm space-y-2">
-                <li>{firstGoal}</li>
-                <li>{secondGoal}</li>
-                <li>{thirdGoal}</li>
+                <li><b className="text-gray-800 font-semibold">Goal 1</b>{firstGoal}</li>
+                <li><b className="text-gray-800 font-semibold">Goal 2</b>{secondGoal}</li>
+                <li><b className="text-gray-800 font-semibold">Goal 3</b>{thirdGoal}</li>
               </ul>
             </div>
 
@@ -134,11 +144,11 @@ function ReBakoPersonalCase({
               <ul className="text-gray-600 text-sm list-disc list-inside space-y-2">
                 {/* Product Designer Role */}
                 <h5><b className="text-gray-800 text-sm font-semibold">Product Designer</b></h5>
-                <li>Melakukan riset ulang dari latar masalah supaya dapat melihat kekurangan dari ide dan dapat mengembangkannya.</li>
-                <li>Melakukan perencanaan backlog setiap fitur.</li>
-                <li>Membuat desain wireframe halaman pertama setiap user membuka menu atau sesuai gambaran awal untuk ReBako.</li>
-                <li>Melakukan perbandingan desain awal atau wireframe dengan desain website kompetitor.</li>
-                <li>Melakukan desain ulang dari wireframe sebelumnya dengan panduan hasil riset dari perbandingan desain kompetitor.</li>
+                <li>Melakukan riset ulang terhadap latar masalah untuk menemukan kekurangan versi sebelumnya.</li>
+                <li>Menyusun product backlog dan perencanaan fitur menggunakan metode Kanban.</li>
+                <li>Membuat wireframe awal berdasarkan kebutuhan pengguna dan alur penggunaan.</li>
+                <li>Melakukan analisis dan perbandingan desain dengan website kompetitor.</li>
+                <li>Mendesain ulang wireframe menjadi UI design berdasarkan hasil riset dan evaluasi kompetitor.</li>
               </ul>
             </div>
           </aside>
@@ -159,11 +169,17 @@ function ReBakoPersonalCase({
                   <h4 className="font-semibold">Research & Insights</h4>
 
                   {/* Subtext 1 */}
-                  <p className="text-gray-600 mt-2">
-                    {firstInsight}
-                    <br></br><br></br>
-                    {secondInsight}
-                  </p>
+                  <div className="text-gray-600 text-sm mt-2">
+                    <p>Riset dilakukan pada tiga aspek utama yaitu harga bahan pokok, struktur resep masakan, dan analisis kompetitor.</p>
+                    <br></br>
+                    <ul className="text-gray-600 list-decimal list-inside space-y-2">
+                      <li><b>Harga Bahan Pokok</b><br></br>{hargaBahanPokok}</li>
+                      <li><b>Riset Resep Masakan</b><br></br>{risetResepMasakan}</li>
+                      <li><b>Analisis Kompetitor</b><br></br>{analisisKompetitor}</li>
+                    </ul>
+                    <br></br>
+                    <p><b>Insight utama : </b>{insight}</p>
+                  </div>
                 </div>
 
                 {/* Point 2 */}
@@ -172,7 +188,17 @@ function ReBakoPersonalCase({
                   <h4 className="font-semibold">User Flow & Wireframes</h4>
                   
                   {/* Subtext 2 */}
-                  <p className="text-gray-600 mt-2">{userFlow}</p>
+                  <div className="text-gray-600 text-sm">
+                    <p className="mt-2">
+                      {userFlow}
+                    </p>
+                    <br></br>
+                    <ul className="list-decimal list-inside space-y-2">
+                      <li><b>Pricelist</b><br></br>{pricelist}</li>
+                      <li><b>Budget</b><br></br>{budget}</li>
+                      <li><b>Recipe</b><br></br>{recipe}</li>
+                    </ul>
+                  </div>
                   
                   {/* Wireframe Screen Image */}
                   <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -184,12 +210,18 @@ function ReBakoPersonalCase({
                 </div>
 
                 {/* Point 3 */}
-                <div>
+                <div className="text-gray-600">
                   {/* Header 3 */}
-                  <h4 className="font-semibold">Design Iteration</h4>
+                  <h4 className="text-black font-semibold">Design Iteration</h4>
                   
                   {/* Subtext 3 */}
-                  <p className="text-gray-600 mt-2">{designIterartion}</p>
+                  <p className="text-sm mt-2">{designIterartion}</p>
+                  <br></br>
+                  <ul className="text-sm list-decimal list-inside space-y-2">
+                    <li>Meng-evaluasi fitur versi sebelumnya.</li>
+                    <li>Membuat desain baru berdasarkan riset kompetitor dan versi sebelumnya.</li>
+                    <li>Melakukan riset data untuk database harga bahan pokok</li>
+                  </ul>
                 </div>
 
                 {/* Point 4 */}
@@ -198,7 +230,7 @@ function ReBakoPersonalCase({
                   <h4 className="font-semibold">Implementation & Handoff</h4>
 
                   {/* Subtext 4 */}
-                  <p className="text-gray-600 mt-2">{implementationHandoff}</p>
+                  <p className="text-gray-600 text-sm mt-2">{implementationHandoff}</p>
                 </div>
               </article>
             </div>
@@ -209,7 +241,7 @@ function ReBakoPersonalCase({
               <h2 className="text-2xl font-semibold mb-4">Final Design</h2>
 
               {/* Subtext */}
-              <p className="text-gray-600 mb-4">{finalDesign}</p>
+              <p className="text-gray-600 text-sm mb-4">{finalDesign}</p>
 
               {/* Final Design Screen Image */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -226,26 +258,26 @@ function ReBakoPersonalCase({
               <h2 className="text-2xl font-semibold mb-4">Results & Learnings</h2>
 
               {/* Subtext */}
-              <p className="text-gray-600">{resultLearning}</p>
+              <p className="text-gray-600 text-sm">{resultLearning}</p>
 
               {/* Next Approach */}
               <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
                 {/* Metric */}
                 <div className="bg-gray-50 p-4 rounded-md text-center">
                   <p className="text-sm text-gray-500">Metric</p>
-                  <p className="text-lg font-semibold mt-2">{metric}</p>
+                  <p className="text-sm font-semibold mt-2">{metric}</p>
                 </div>
                 
                 {/* User Testing */}
                 <div className="bg-gray-50 p-4 rounded-md text-center">
                   <p className="text-sm text-gray-500">User Testing</p>
-                  <p className="text-lg font-semibold mt-2">{userTesting}</p>
+                  <p className="text-sm font-semibold mt-2">{userTesting}</p>
                 </div>
                 
                 {/* Next Steps */}
                 <div className="bg-gray-50 p-4 rounded-md text-center">
                   <p className="text-sm text-gray-500">Next Steps</p>
-                  <p className="text-lg font-semibold mt-2">{nextSteps}</p>
+                  <p className="text-sm font-semibold mt-2">{nextSteps}</p>
                 </div>
               </div>
             </div>
