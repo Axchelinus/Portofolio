@@ -10,8 +10,10 @@ function AboutMe() {
           <ul className="list-disc list-inside space-y-2 text-gray-700 flex-1">
             <li>Creativity</li>
             <li>Critical Thinking</li>
+            <li>Analytical Thinking</li>
             <li>Problem Solving</li>
             <li>Communication</li>
+            <li>Teamwork</li>
           </ul>
         </section>
 
@@ -23,6 +25,8 @@ function AboutMe() {
             <li>HTML, CSS & JavaScript</li>
             <li>React & Tailwind</li>
             <li>Machine Learning</li>
+            <li>API Integration</li>
+            <li>Version Control</li>
           </ul>
         </section>
 
@@ -32,7 +36,9 @@ function AboutMe() {
           <ul className="list-disc list-inside space-y-2 text-gray-700 flex-1">
             <li>User Research & Analysis</li>
             <li>User Flow & Interaction Design</li>
+            <li>Usability Testing</li>
             <li>Front-End Development</li>
+            <li>Information Architecture</li>
             <li>Documentation & Iteration</li>
           </ul>
         </section>

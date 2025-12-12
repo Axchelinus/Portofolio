@@ -23,7 +23,7 @@ function Hero() {
 
                     {/* Introduction Subtext */}
                     <p className="text-sm md:text-base lg:text-lg opacity-80 mb-6">
-                        Mahasiswa Computer Science dengan fokus pada UI/UX Design dan pengembangan aplikasi. Berpengalaman melalui proyek kampus dan proyek pribadi dalam desain UI, prototyping, dan pengembangan aplikasi.
+                        Computer Science student at <b>Binus University</b> with a focus on UI/UX Design and application development. Experienced in <b>academic and personal projects</b> involving UI design, prototyping, and app development. Highly dedicated, quick to learn, and able to work effectively both independently and in team environments.
                     </p>
 
                     {/* Introduction Buttons */}
@@ -35,7 +35,7 @@ function Hero() {
                         </button>
 
                         {/* Resume Button */}
-                        <a href="https://drive.google.com/drive/folders/1fl9_aCrAt1rwVJQy3Y-pFNHOHYThJrtC?usp=sharing" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-5 py-2 border-2 rounded-lg font-medium text-sm  hover:bg-gray-100 transition-all">
+                        <a href="https://drive.google.com/file/d/1MoOzfFrFizA6SSYmO0oUbq_55MOc8i-R/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-5 py-2 border-2 rounded-lg font-medium text-sm  hover:bg-gray-100 transition-all">
                             My Resume
                         </a>
                     </div>

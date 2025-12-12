@@ -36,23 +36,23 @@ function ReBakoTeamCase({
   secondGoal = " — Memberikan perhitungan budget untuk pengguna memilih bahan pokok.",
   thirdGoal = " — Menyajikan resep yang berdasarkan harga total dari resep tersebut.",
 
-  Insight = "Proses riset difokuskan pada pengumpulan informasi harga bahan pokok dari platform database pangan yang menyediakan API. Selain itu, melakukan riset pada website yummy sebagai referensi untuk membuat website ReBako ini. Scope dari ReBako ini masih belum begitu jelas.",
+  Insight = "Riset difokuskan pada pengumpulan data harga bahan pokok menggunakan platform yang menyediakan API. Selain itu, dilakukan analisis desain dari website referensi seperti Yummy untuk memahami struktur konten dan alur penggunaan. Lingkup awal proyek masih berupa eksplorasi konsep sehingga fokus riset lebih pada validasi kebutuhan dasar pengguna.",
 
-  userFlow = "Flow utama dalam website ini adalah user akan berada pada menu database harga bahan pokok yang menyajikan harga dari informasi yang telah dikumpulkan dari platform yang menyediakan API. Setelah itu, user dapat menghitung budget yang diperlukan untuk membeli bahan pokok tersebut pada menu pengeluaran, menu database akan mempunyai checkbox yang dapat user centang untuk menggunakan fitur pada menu pengeluaran tersebut hanya jika user sudah melakukan register atau login. User juga dapat melihat resep masakan yang tersedia dan memiliki perkiraan harga untuk resep tersebut.",
+  userFlow = "Flow utama dirancang agar pengguna dapat melihat database harga bahan pokok, kemudian menghitung estimasi pengeluaran melalui fitur kalkulasi. Akses fitur kalkulasi dapat dilakukan setelah pengguna melakukan registrasi atau login. Selain itu, pengguna dapat melihat rekomendasi resep dengan estimasi harga. Seluruh flow divisualisasikan melalui wireframe sebagai dasar awal pengembangan.",
 
-  designIterartion = "Ide ini adalah sebuah solusi yang berguna untuk menyelesaikan masalah yang sudah ditemukan dari berbagai sumber pada berita. Meskipun masih belum cukup menyelesaikan masalah, namun ReBako masih dapat dikembangkan ke-depannya.",
+  designIterartion = "Konsep ReBako disusun sebagai solusi awal untuk membantu masyarakat memahami perubahan harga bahan pokok. Iterasi desain dilakukan terbatas pada tahap eksplorasi awal. Proyek masih terbuka untuk pengembangan lebih lanjut karena scope kebutuhan pengguna dan data belum sepenuhnya diselesaikan pada versi ini.",
 
-  implementationHandoff = "Saya ikut berperan dalam membuat wireframe pada desain figma sehingga dapat secara cepat untuk progress implementasi front-end dan back-end. Bagian front-end dan back-end dikerjakan oleh tim dan saya menyerahkan wireframe yang sudah jadi serta dapat di-ikuti untuk layout desainnya meskipun desain belum jadi sepenuhnya dan masih wireframe saja. Keterbatasan waktu saat melakukan desain sehingga dalam sprint yang telah ditentukan, hanya cukup untuk membuat wireframe saja.",
+  implementationHandoff = "Saya berkontribusi pada pembuatan wireframe di Figma untuk mempercepat proses implementasi front-end dan back-end. Wireframe disusun sebagai referensi tata letak dan struktur halaman. Tim pengembang menggunakan wireframe ini sebagai dasar pengembangan meskipun desain UI final belum tersedia karena keterbatasan waktu sprint.",
 
-  finalDesign = "Hasil desain final dari wireframe ReBako dan desain ini merupakan front-end website yang sudah selesai, mengikuti layout wireframe dengan adanya beberapa perubahan.",
+  finalDesign = "Desain final merupakan hasil implementasi front-end berdasarkan wireframe yang telah dibuat. Layout mengikuti struktur wireframe dengan beberapa penyesuaian minor pada tampilan.",
 
-  resultLearning = "Project ini selesai karena sprint telah berakhir. Meskipun terdapat sedikit fitur untuk admin yang belum terimplementasikan, fitur untuk selain admin sudah selesai semua dan berfungsi dengan baik. Kami melakukan tiga sprint yaitu sprint awal yang sangat singkat sehingga banyak yang tidak terselesaikan sesuai backlog yang telah ditentukan pada sprint tersebut, sprint kedua cukup singkat sehingga masih ada beberapa yang tidak terselesaikan dan sprint ketiga atau terakhir cukup singkat namun, hampir semua fitur yang direncanakan telah terpenuhi sesuai backlog yang tersisa fitur update bahan untuk admin.",
+  resultLearning = "Proyek diselesaikan sesuai batas waktu tiga sprint. Beberapa fitur admin belum sepenuhnya terimplementasi, tetapi fitur utama pengguna telah berfungsi dengan baik. Setiap sprint memberikan pembelajaran mengenai manajemen backlog, estimasi waktu, dan penyusunan prioritas fitur.",
 
-  metric = "75% mengikuti wireframe",
+  metric = "±75% mengikuti wireframe",
 
-  userTesting = "Kualitatif, fokus pada pemahaman user terhadap ide",
+  userTesting = "Kualitatif — fokus pada pemahaman pengguna terhadap konsep dan alur fitur",
 
-  nextSteps = "Tahap pengembangan"
+  nextSteps = "Melakukan riset mendalam dan pengembangan lanjutan"
 }) {
   return (
     // Case Study Project Page

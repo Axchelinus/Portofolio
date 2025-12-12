@@ -36,19 +36,19 @@ function NutricycleCase({
   secondGoal = " — Membuat sistem pelacakan nutrisi setiap kali user memesan paket.",
   thirdGoal = " — Membantu user mengatur budget makan melalui visualisasi harga per paket.",
 
-  Insight = "Proses riset dilakukan dengan melakukan wawancara terkait kendala yang dialami dan aplikasi Nutricycle sebagai penyelesaiannya. Scope awal atau sementara dari Nutricycle ini adalah mahasiswa Bina Nusantara. Selain melalui proses wawancara, kami menampilkan prototype dalam sebuah tenant yang telah disediakan dan user testing dilakukan dengan menjelaskan Nutricycle dan mengisi form.",
+  Insight = "Riset dilakukan melalui wawancara untuk memahami kendala pengguna terkait pengelolaan katering ramah lingkungan dan bagaimana Nutricycle dapat menjadi solusi. Target awal aplikasi ini adalah mahasiswa Bina Nusantara. Selain wawancara, kami melakukan user testing dengan menampilkan prototipe pada tenant pameran dan mengumpulkan feedback melalui formulir evaluasi.",
 
-  userFlow = "Flow utama dalam aplikasi ini adalah user dapat memilih kategori katering yang tersedia, selanjutnya akan diarahkan ke halaman berisi paket yang tersedia sesuai kategori yang user pilih. Setelah itu, user akan diberi pilihan yaitu menggunakan kotak makan ramah lingkungan atau kertas minyak dan user akan ditampilkan untuk paketnya serta dapat memilih jenis pembayarannya.",
+  userFlow = "Alur utama aplikasi dimulai dari pemilihan kategori katering, dilanjutkan dengan pemilihan paket yang tersedia. Pengguna kemudian memilih jenis kemasan (kotak makan ramah lingkungan atau kertas minyak) sebelum melanjutkan ke detail paket dan proses pembayaran. Wireframe dan user flow dirancang untuk memastikan navigasi tetap jelas dan mudah digunakan.",
 
-  designIterartion = "Ide ini masih memerlukan pengembangan lebih lanjut karena Nutricycle saat ini baru berada pada tahap Minimum Viable Product (MVP). Namun, konsep bisnisnya tetap dapat dijalankan meskipun aplikasi belum sepenuhnya siap.",
+  designIterartion = "Nutricycle masih berada pada tahap Minimum Viable Product (MVP). Beberapa aspek, seperti pengelolaan data nutrisi, masih memerlukan riset lanjutan. Iterasi desain dilakukan berdasarkan temuan awal dan masukan dari hasil user testing selama pameran.",
 
-  implementationHandoff = "Saya ikut berperan dalam membuat desain UI/UX untuk bagian halaman utama, halaman keranjang dan halaman history belanja. Desain figma sudah lengkap secara fiturnya sesuai dengan perencanaan awal dan selesai tepat waktu sesuai sprint. Setelah menyelesaikan desain, saya menyerahkan desain sebagai potokan untuk rekan yang ditugaskan dalam implementasi front-end dan back-end.",
+  implementationHandoff = "Saya berkontribusi dalam desain UI/UX untuk halaman utama, keranjang, dan histori belanja. Seluruh desain diselesaikan sesuai target sprint. Setelah finalisasi, desain diserahkan kepada tim front-end dan back-end sebagai acuan implementasi.",
 
   finalDesign = "Desain final menunjukkan perbedaan cukup banyak dari mockup Figma karena penyesuaian waktu implementasi. Namun, fungsionalitas utama tetap selaras dengan konsep awal.",
 
-  resultLearning = "Project ini belum selesai karena hasil desain final yang masih berbeda dan perlu riset tambahan untuk menentukan nutrisi gizi pada sebuah makanan. Hasil dari riset pameran juga memberikan beberapa saran sebagai tambahan yang akan disusun terlebih dahulu kedepannya.",
+  resultLearning = "Proyek ini belum sepenuhnya selesai karena diperlukan penyesuaian lebih lanjut pada fitur nutrisi serta validasi tambahan dari hasil user testing. Riset selama pameran juga memberikan saran pengembangan yang akan menjadi acuan untuk iterasi berikutnya.",
 
-  metric = "60% mengikuti desain figma",
+  metric = "±60% mengikuti desain figma",
 
   userTesting = "Kualitatif, fokus pada pemahaman user terhadap ide",
 

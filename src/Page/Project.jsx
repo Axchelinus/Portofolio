@@ -28,7 +28,7 @@ function Project() {
                         {/* STAR Project 1 Title */}
                         <section className="p-6">
                             {/* Header */}
-                            <h3 className="text-2xl font-semibold mb-2">ReBako V2 <span className="text-blue-600 font-medium text-base">(Solo Project)</span>
+                            <h3 className="text-2xl font-semibold mb-2">ReBako V2 <span className="text-blue-600 font-medium text-base">(Individual Project)</span>
                             </h3>
 
                             {/* Subtext */}
